@@ -70,31 +70,46 @@
 
 
 
-import React, { useRef, useState } from 'react'
+// import React, { useRef, useState } from 'react'
+
+// const App = () => {
+//   const refElement = useRef("")
+//   const [name , setName] = useState("Sana Ullah")
+
+//   function resetData(){
+//     setName("")
+//     refElement.current.focus();
+
+//   }
+
+//   function handleInput(){
+//     refElement.current.value = "Congratulations for Successful Registration"
+//     refElement.current.style.color = "Green"
+
+//     refElement.current.style.fontSize = "50px"
+//   }
+//   return (
+//     <>
+//     <h1>Learning UseReferene Hook</h1>
+//     <label>Enter your name</label>
+//     <input ref={refElement} type='text' value={name} onChange={(e)=>{setName(e.target.value)}}/><br/>
+//     <button onClick={resetData} >Reset your text now</button>
+//     <button onClick={handleInput}>All the Styling will be apply after clicking this button</button>
+//      </>
+//   )
+// }
+
+// export default App
+
+
+
+import React from 'react'
+import ChildA from './ChildA'
 
 const App = () => {
-  const refElement = useRef("")
-  const [name , setName] = useState("Sana Ullah")
-
-  function resetData(){
-    setName("")
-    refElement.current.focus();
-
-  }
-
-  function handleInput(){
-    refElement.current.value = "Congratulations for Successful Registration"
-    refElement.current.style.color = "Green"
-
-    refElement.current.style.fontSize = "50px"
-  }
+ const name = "Sana Ullah"
   return (
-    <>
-    <h1>Learning UseReferene Hook</h1>
-    <input ref={refElement} type='text' value={name} onChange={(e)=>{setName(e.target.value)}}/><br/>
-    <button onClick={resetData} >Reset your text now</button>
-    <button onClick={handleInput}>All the Styling will be apply after clicking this button</button>
-     </>
+    <ChildA name = {name}/>
   )
 }
 
