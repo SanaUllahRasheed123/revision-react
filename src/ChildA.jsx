@@ -1,9 +1,9 @@
 import React from 'react'
 import ChildB from './ChildB'
 
-const ChildA = ({name}) => {
+const ChildA = () => {
   return (
-    <ChildB name = {name}/>
+    <ChildB/>
   )
 }
 
