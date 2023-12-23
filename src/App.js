@@ -103,25 +103,25 @@
 
 
 
- import React , { createContext } from 'react'
-import ChildA from './ChildA'
+//  import React , { createContext } from 'react'
+// import ChildA from './ChildA'
 
-const data = createContext();
-const data1 = createContext();
-const App = () => {
-  const name = "Sana Ullah";
-  const age = "29"
-  return (
-   <>
-    <data.Provider value= {name}>
-    <data1.Provider value={age}>
-      <ChildA/>
-      </data1.Provider>
-    </data.Provider>
-   </>
+// const data = createContext();
+// const data1 = createContext();
+// const App = () => {
+//   const name = "Sana Ullah";
+//   const age = "29"
+//   return (
+//    <>
+//     <data.Provider value= {name}>
+//     <data1.Provider value={age}>
+//       <ChildA/>
+//       </data1.Provider>
+//     </data.Provider>
+//    </>
 
-  )
-}
+//   )
+// }
 
-export default App
-export {data, data1};
+// export default App
+// export {data, data1};
