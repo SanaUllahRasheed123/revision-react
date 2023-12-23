@@ -126,26 +126,51 @@
 // export default App
 // export {data, data1};
 
-import React, { createContext } from 'react'
-import ChildA from './ChildA'
+// import React, { createContext } from 'react'
+// import ChildA from './ChildA'
 
-const data = createContext();
-const data1 = createContext();
+// const data = createContext();
+// const data1 = createContext();
+
+// const App = () => {
+//   const name = "Sana Ullah";
+//   const gender = "Male";
+//   return (
+//     <>
+//       <data.Provider value={name}>
+//       <data1.Provider value={gender}>
+//       <ChildA/>
+//       </data1.Provider>
+//       </data.Provider>
+//     </>
+//   )
+// }
+
+// export default App
+
+// export {data, data1}
+
+
+import React, { useMemo, useState } from 'react'
+// import './App.css'
 
 const App = () => {
-  const name = "Sana Ullah";
-  const gender = "Male";
+  const [add, setAdd] = useState(0)
+  const [minus, setMinus] = useState(100);
+ const multiplication = useMemo(function multiply(){
+  console.log("***************")
+  return add*10;
+},[add])
   return (
     <>
-      <data.Provider value={name}>
-      <data1.Provider value={gender}>
-      <ChildA/>
-      </data1.Provider>
-      </data.Provider>
+    <h1>Happy Learning</h1>
+    {multiplication}
+      <button onClick={()=>setAdd(add+1)}>Addition</button>
+      <span>{add}</span><br></br>
+      <button onClick={()=>setMinus(minus-1)}>Subtraction</button>
+      <span>{minus}</span>
     </>
   )
 }
 
 export default App
-
-export {data, data1}
