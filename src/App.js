@@ -151,25 +151,42 @@
 // export {data, data1}
 
 
-import React, { useMemo, useState } from 'react'
-// import './App.css'
+// import React, { useMemo, useState } from 'react'
+// // import './App.css'
 
+// const App = () => {
+//   const [add, setAdd] = useState(0)
+//   const [minus, setMinus] = useState(100);
+//  const multiplication = useMemo(function multiply(){
+//   console.log("***************")
+//   return add*10;
+// },[add])
+//   return (
+//     <>
+//     <h1>Happy Learning</h1>
+//     {multiplication}
+//       <button onClick={()=>setAdd(add+1)}>Addition</button>
+//       <span>{add}</span><br></br>
+//       <button onClick={()=>setMinus(minus-1)}>Subtraction</button>
+//       <span>{minus}</span>
+//     </>
+//   )
+// }
+
+// export default App
+
+
+import React, { useState } from 'react'
+import ChildA from './ChildA'
 const App = () => {
-  const [add, setAdd] = useState(0)
-  const [minus, setMinus] = useState(100);
- const multiplication = useMemo(function multiply(){
-  console.log("***************")
-  return add*10;
-},[add])
+const [add, setAdd] = useState(0)
+
   return (
-    <>
-    <h1>Happy Learning</h1>
-    {multiplication}
-      <button onClick={()=>setAdd(add+1)}>Addition</button>
-      <span>{add}</span><br></br>
-      <button onClick={()=>setMinus(minus-1)}>Subtraction</button>
-      <span>{minus}</span>
-    </>
+   <>
+   <ChildA/>
+    <h1>{add}</h1>
+    <button onClick={()=>{setAdd(add+1)}}>+</button>
+   </>
   )
 }
 
