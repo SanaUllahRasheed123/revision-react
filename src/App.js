@@ -199,23 +199,23 @@
 
 // export default App
 
-import React, { useState } from 'react'
+import React, { useRef } from 'react'
 
 const App = () => {
+const refObject = useRef()
+  // const [name, setName] = useState("")
+  // const [pswd,setPswd] = useState("")
 
-  const [name, setName] = useState("")
-  const [pswd,setPswd] = useState("")
-
-  const handleChange = (e) => {
-   if(e.target.name === "first-Name"){
-    const capName = (e.target.value).toUpperCase()
-    setName(capName)
-   }else{
-    setPswd(e.target.value)
-   }
+  // const handleChange = (e) => {
+  //  if(e.target.name === "first-Name"){
+  //   const capName = (e.target.value).toUpperCase()
+  //   setName(capName)
+  //  }else{
+  //   setPswd(e.target.value)
+  //  }
    
 
-  }
+  // }
 
 // function handlePassword(e){
 //   console.log(e.target.value)
@@ -224,13 +224,19 @@ const App = () => {
 
 // }
 
+function handleSubmit(e){
+  e.preventDefault();
+  console.log((refObject.current.value).toUpperCase())
+}
+
   return (
     <>
-      <form>
+      <form onSubmit={handleSubmit}>
          <label>First name:</label><br/>
-  <input type="text" value={name} name='first-Name' onChange={handleChange}/><br/>
-  <label>Password:</label><br/>
-  <input type="password" value={pswd} name='password' onChange={handleChange}/><br/>
+  <input type="text" ref={refObject}/><br/>
+  <button>Submit</button>
+  {/* <label>Password:</label><br/>
+  <input type="password" value={pswd} name='password' onChange={handleChange}/><br/> */}
       </form>
     </>
   )
