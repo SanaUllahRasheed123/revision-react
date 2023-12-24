@@ -176,14 +176,17 @@
 // export default App
 
 
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import ChildA from './ChildA'
 const App = () => {
 const [add, setAdd] = useState(0)
+const Learning = useCallback(() => {
+  //some operation
+},[])
 
   return (
    <>
-   <ChildA/>
+   <ChildA Learning= {Learning}/>
     <h1>{add}</h1>
     <button onClick={()=>{setAdd(add+1)}}>+</button>
    </>

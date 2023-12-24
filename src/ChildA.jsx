@@ -1,7 +1,7 @@
-import React from 'react'
+import React, {memo} from 'react'
 
 
-const ChildA = () => {
+const ChildA = ({Learning}) => {
   console.log("ChildA mounted")
   return (
    <>
@@ -10,4 +10,4 @@ const ChildA = () => {
   )
 }
 
-export default ChildA
+export default memo(ChildA)
