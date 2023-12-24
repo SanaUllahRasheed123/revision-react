@@ -176,24 +176,59 @@
 // export default App
 
 
-import React, { useCallback, useState } from 'react'
-import ChildA from './ChildA'
+// import React, { useCallback, useState } from 'react'
+// import ChildA from './ChildA'
+// const App = () => {
+// const [add, setAdd] = useState(0)
+// const [count, setCount] = useState(0)
+// const Learning = useCallback(() => {
+//   //some operation
+// },[])
+
+//   return (
+//    <>
+//    <ChildA Learning= {Learning}/>
+//     <h1>{add}</h1>
+//     <button onClick={()=>{setAdd(add+1)}}>+</button><br></br>
+//     <h1>{count}</h1>
+//     <button onClick={()=>setCount(count+2)}>Count here</button>
+
+//    </>
+//   )
+// }
+
+// export default App
+
+import React, { useState } from 'react'
+
 const App = () => {
-const [add, setAdd] = useState(0)
-const [count, setCount] = useState(0)
-const Learning = useCallback(() => {
-  //some operation
-},[])
+
+  const [name, setName] = useState("")
+  const [pswd,setPswd] = useState("")
+
+  const handleChange = (e) => {
+    console.log(e.target.value)
+    const capName = (e.target.value).toUpperCase()
+
+    setName(capName)
+  }
+
+function handlePassword(e){
+  console.log(e.target.value)
+  setPswd(e.target.value)
+
+
+}
 
   return (
-   <>
-   <ChildA Learning= {Learning}/>
-    <h1>{add}</h1>
-    <button onClick={()=>{setAdd(add+1)}}>+</button><br></br>
-    <h1>{count}</h1>
-    <button onClick={()=>setCount(count+2)}>Count here</button>
-
-   </>
+    <>
+      <form>
+         <label>First name:</label><br/>
+  <input type="text" value={name} onChange={handleChange}/><br/>
+  <label>Password:</label><br/>
+  <input type="password" value={pswd} onChange={handlePassword}/><br/>
+      </form>
+    </>
   )
 }
 
