@@ -232,6 +232,7 @@ function handleSubmit(e){
   return (
     <>
       <form onSubmit={handleSubmit}>
+      <h2>&#128517;</h2>
          <label>First name:</label><br/>
   <input type="text" ref={refObject}/><br/>
   <button>Submit</button>
