@@ -207,26 +207,30 @@ const App = () => {
   const [pswd,setPswd] = useState("")
 
   const handleChange = (e) => {
-    console.log(e.target.value)
+   if(e.target.name === "first-Name"){
     const capName = (e.target.value).toUpperCase()
-
     setName(capName)
+   }else{
+    setPswd(e.target.value)
+   }
+   
+
   }
 
-function handlePassword(e){
-  console.log(e.target.value)
-  setPswd(e.target.value)
+// function handlePassword(e){
+//   console.log(e.target.value)
+//   setPswd(e.target.value)
 
 
-}
+// }
 
   return (
     <>
       <form>
          <label>First name:</label><br/>
-  <input type="text" value={name} onChange={handleChange}/><br/>
+  <input type="text" value={name} name='first-Name' onChange={handleChange}/><br/>
   <label>Password:</label><br/>
-  <input type="password" value={pswd} onChange={handlePassword}/><br/>
+  <input type="password" value={pswd} name='password' onChange={handleChange}/><br/>
       </form>
     </>
   )
