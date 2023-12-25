@@ -199,10 +199,10 @@
 
 // export default App
 
-import React, { useRef } from 'react'
+// import React, { useRef } from 'react'
 
-const App = () => {
-const refObject = useRef()
+// const App = () => {
+// const refObject = useRef()
   // const [name, setName] = useState("")
   // const [pswd,setPswd] = useState("")
 
@@ -224,21 +224,37 @@ const refObject = useRef()
 
 // }
 
-function handleSubmit(e){
-  e.preventDefault();
-  console.log((refObject.current.value).toUpperCase())
-}
+// function handleSubmit(e){
+//   e.preventDefault();
+//   console.log((refObject.current.value).toUpperCase())
+// }
 
+//   return (
+//     <>
+//       <form onSubmit={handleSubmit}>
+//       <h2>&#128517;</h2>
+//          <label>First name:</label><br/>
+//   <input type="text" ref={refObject}/><br/>
+//   <button>Submit</button>
+//   {/* <label>Password:</label><br/>
+//   <input type="password" value={pswd} name='password' onChange={handleChange}/><br/> */}
+//       </form>
+//     </>
+//   )
+// }
+
+// export default App
+
+import React from 'react'
+import ChildA from './ChildA'
+
+const App = () => {
+  function getData(data){
+    console.log(data)
+  }
   return (
     <>
-      <form onSubmit={handleSubmit}>
-      <h2>&#128517;</h2>
-         <label>First name:</label><br/>
-  <input type="text" ref={refObject}/><br/>
-  <button>Submit</button>
-  {/* <label>Password:</label><br/>
-  <input type="password" value={pswd} name='password' onChange={handleChange}/><br/> */}
-      </form>
+    <ChildA getData={getData}/>
     </>
   )
 }
