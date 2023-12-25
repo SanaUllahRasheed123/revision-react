@@ -245,18 +245,39 @@
 
 // export default App
 
+
+// Lifting State Up
+// import React from 'react'
+// import ChildA from './ChildA'
+
+// const App = () => {
+//   function getData(data){
+//     console.log(data)
+//   }
+//   return (
+//     <>
+//     <ChildA getData={getData}/>
+//     </>
+//   )
+// }
+
+// export default App
+
+
+//form Started
+
+
 import React from 'react'
-import ChildA from './ChildA'
+import Form from './Form'
+import './App.css'
 
 const App = () => {
-  function getData(data){
-    console.log(data)
-  }
   return (
     <>
-    <ChildA getData={getData}/>
+      <Form/>
     </>
   )
 }
 
 export default App
+
