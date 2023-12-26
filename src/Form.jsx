@@ -1,14 +1,29 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Form = () => {
     const data = {name:"", email:"", password:""};
+    const [flag, setFlag] = useState(false)
     const [inputData,setInputData] = useState(data)
+    useEffect(()=>{
+        console.log("Registered")
+    },[flag])
     function handleData(e){
         setInputData({...inputData,[e.target.name]:e.target.value})
         console.log(inputData)
     }
+    function handleSubmit (e){
+        e.preventDefault();
+        if(!inputData.name || !inputData.email || !inputData.password){
+            alert("All fields are Mandatory")
+        }else{
+            setFlag(true)
+        }
+
+    }
   return (
-    <form className='container'>
+    <>
+    <pre>{(flag)?<h2>Hello, {inputData.name} you've registered successfully</h2>:""}</pre>
+ <form className='container' onSubmit={handleSubmit}>
         <div className='header'>
             <h1>Registration Form</h1>
         </div>
@@ -16,15 +31,18 @@ const Form = () => {
             <input type='text' placeholder='Enter Your Name' name='name' value={inputData.name} onChange={handleData}/>
         </div>
         <div>
-            <input type='email' placeholder='Enter Your email' name='email' value={inputData.email} onChange={handleData}/>
+            <input type='text' placeholder='Enter Your email' name='email' value={inputData.email} onChange={handleData}/>
         </div>
         <div>
-            <input type='password' placeholder='Enter Your password' name='password' value={inputData.email} onChange={handleData}/>
+            <input type='password' placeholder='Enter Your password' name='password' value={inputData.password} onChange={handleData}/>
         </div>
         <div>
             <button type='submit'>Submit</button>
         </div>
     </form>
+
+    </>
+   
   )
 }
 
