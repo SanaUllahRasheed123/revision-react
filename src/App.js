@@ -245,18 +245,27 @@
 
 // export default App
 
-import React from 'react'
-import ChildA from './ChildA'
+// 
+
+
+
+// export default App
+
+
 
 const App = () => {
-  function getData(data){
-    console.log(data)
-  }
+  const array1 = ["one", "two", "three", "four"];
+
   return (
     <>
-    <ChildA getData={getData}/>
+      {array1.map((x, index) => (
+        <div key={index}>
+          {x}
+          <br />
+        </div>
+      ))}
     </>
-  )
-}
+  );
+};
 
 export default App
