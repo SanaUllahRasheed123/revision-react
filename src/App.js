@@ -280,20 +280,49 @@
 // export default App
 
 
+// import React from 'react'
+// import { useState } from 'react'
+
+// const App = () => {
+//   const [allValue, setAllValues] = useState({firstName:"Sana Ullah", lastName:"Rasheed"})
+
+//   function update(){
+//     setAllValues({...allValue,firstName:"Ubaid Ullah"})
+//   }
+//   return (
+//     <>
+//     <h1>Hello, my first name is {allValue.firstName} and my father  name is {allValue.lastName}</h1>
+//     <button onClick={update}></button>
+    
+//     </>
+//   )
+// }
+
+// export default App
+
+
 import React from 'react'
 import { useState } from 'react'
 
 const App = () => {
-  const [allValue, setAllValues] = useState({firstName:"Sana Ullah", lastName:"Rasheed"})
+  const [items, setItems] = useState([])
+  const addItems = () => {
+    setItems([...items,{
+      id:items.length,
+      value:Math.random()
+    }])
 
-  function update(){
-    setAllValues({...allValue,firstName:"Ubaid Ullah"})
   }
   return (
     <>
-    <h1>Hello, my first name is {allValue.firstName} and my father  name is {allValue.lastName}</h1>
-    <button onClick={update}></button>
-    
+    <ol>
+      {
+        items.map((item)=>(
+          <li key={item.id}>{item.value}</li>
+        ))
+      }
+    </ol>
+    <button onClick={addItems}>Add Items</button>
     </>
   )
 }
