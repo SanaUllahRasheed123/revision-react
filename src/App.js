@@ -258,12 +258,20 @@ const App = () => {
 
   return (
     <>
-      {array1.map((x, index) => (
-        <div key={index}>
-          {x}
+      {/* {array1.map((x, index) => (
+        <h1 key={index}>
+          {x} and the index is {index}
           <br />
-        </div>
-      ))}
+        </h1>
+      ))} */}
+
+      {
+        array1.map((x,index)=>(
+          <h1 key={index}>
+            {x} and the key is {index}
+          </h1>
+        ))
+      }
     </>
   );
 };
