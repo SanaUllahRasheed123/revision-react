@@ -253,27 +253,49 @@
 
 
 
-const App = () => {
-  const array1 = ["one", "two", "three", "four"];
+// const App = () => {
+//   const array1 = ["one", "two", "three", "four"];
 
+//   return (
+//     <>
+//       {/* {array1.map((x, index) => (
+//         <h1 key={index}>
+//           {x} and the index is {index}
+//           <br />
+//         </h1>
+//       ))} */}
+
+//       {
+//         array1.map((x,index)=>(
+//           <h1 key={index}>
+//             {x} and the key is {index}
+//           </h1>
+//         ))
+//       }
+//     </>
+//   );
+// };
+
+
+// export default App
+
+
+import React from 'react'
+import { useState } from 'react'
+
+const App = () => {
+  const [allValue, setAllValues] = useState({firstName:"Sana Ullah", lastName:"Rasheed"})
+
+  function update(){
+    setAllValues({...allValue,firstName:"Ubaid Ullah"})
+  }
   return (
     <>
-      {/* {array1.map((x, index) => (
-        <h1 key={index}>
-          {x} and the index is {index}
-          <br />
-        </h1>
-      ))} */}
-
-      {
-        array1.map((x,index)=>(
-          <h1 key={index}>
-            {x} and the key is {index}
-          </h1>
-        ))
-      }
+    <h1>Hello, my first name is {allValue.firstName} and my father  name is {allValue.lastName}</h1>
+    <button onClick={update}></button>
+    
     </>
-  );
-};
+  )
+}
 
 export default App
