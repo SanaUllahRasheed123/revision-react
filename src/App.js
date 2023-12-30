@@ -330,18 +330,26 @@
 // export default App
 
 
-import React from 'react'
-// import './Todo.css'
-import './App.css'
-import Todo from './Todo'
+// 
+const user = {
+  name: 'Hedy Lamarr',
+  imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
+  imageSize: 90,
+};
 
-const App = () => {
+export default function App() {
   return (
-    <div className='app'>
-    <Todo/>
-
-    </div>
-  )
+    <>
+      <h1>{user.name}</h1>
+      <img
+        className="avatar"
+        src={user.imageUrl}
+        alt={'Photo of ' + user.name}
+        style={{
+          width: user.imageSize,
+          height: user.imageSize
+        }}
+      />
+    </>
+  );
 }
-
-export default App
