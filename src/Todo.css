@@ -71,6 +71,7 @@ button:hover {
 
 .btn-position {
     position: relative;
-    left: 11%;
+    left: 20%;
     top: -54px;
+    padding-right: 50px;
 }
