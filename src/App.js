@@ -370,17 +370,41 @@
 
 
 
+// import React from 'react'
+// import Counter1 from './Counter1'
+// import Counter2 from './Counter2'
+
+// const App = () => {
+//   return (
+//     <div>
+//     <Counter1/>
+//     <Counter2/>
+    
+//     </div>
+//   )
+// }
+
+// export default App
+
 import React from 'react'
-import Counter1 from './Counter1'
-import Counter2 from './Counter2'
+import './App.css'
+import  styles from './outside.css'
 
 const App = () => {
+
+  // const myStyle = {
+  //   color:"red",
+  //   backgroundColor:"orange"
+  // }
   return (
-    <div>
-    <Counter1/>
-    <Counter2/>
-    
-    </div>
+    <>
+    {/* <h1 style={{color:"red", fontSize:'50px',textAlign:"center"}}> App</h1> */}
+    {/* <h1 style={myStyle}>Sana Ullah</h1> */}
+    <div>Sana Ullah</div>
+
+    <p className={styles.master}>Here is the paragraph</p>
+    </>
+  
   )
 }
 
