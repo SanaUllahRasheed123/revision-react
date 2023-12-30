@@ -301,29 +301,46 @@
 // export default App
 
 
+// import React from 'react'
+// import { useState } from 'react'
+
+// const App = () => {
+//   const [items, setItems] = useState([])
+//   const addItems = () => {
+//     setItems([...items,{
+//       id:items.length,
+//       value:Math.random()
+//     }])
+
+//   }
+//   return (
+//     <>
+//     <ol>
+//       {
+//         items.map((item)=>(
+//           <li key={item.id}>{item.value}</li>
+//         ))
+//       }
+//     </ol>
+//     <button onClick={addItems}>Add Items</button>
+//     </>
+//   )
+// }
+
+// export default App
+
+
 import React from 'react'
-import { useState } from 'react'
+// import './Todo.css'
+import './App.css'
+import Todo from './Todo'
 
 const App = () => {
-  const [items, setItems] = useState([])
-  const addItems = () => {
-    setItems([...items,{
-      id:items.length,
-      value:Math.random()
-    }])
-
-  }
   return (
-    <>
-    <ol>
-      {
-        items.map((item)=>(
-          <li key={item.id}>{item.value}</li>
-        ))
-      }
-    </ol>
-    <button onClick={addItems}>Add Items</button>
-    </>
+    <div className='app'>
+    <Todo/>
+
+    </div>
   )
 }
 
