@@ -355,13 +355,31 @@
 // }
 
 
+// import React from 'react'
+// import Counter from './Counter'
+
+// const App = () => {
+//   return (
+//     <div>
+//     <Counter/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+
 import React from 'react'
-import Counter from './Counter'
+import Counter1 from './Counter1'
+import Counter2 from './Counter2'
 
 const App = () => {
   return (
     <div>
-    <Counter/>
+    <Counter1/>
+    <Counter2/>
+    
     </div>
   )
 }
