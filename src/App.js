@@ -386,25 +386,41 @@
 
 // export default App
 
+// import React from 'react'
+// import './App.css'
+// import  styles from './outside.css'
+
+// const App = () => {
+
+//   // const myStyle = {
+//   //   color:"red",
+//   //   backgroundColor:"orange"
+//   // }
+//   return (
+//     <>
+//     {/* <h1 style={{color:"red", fontSize:'50px',textAlign:"center"}}> App</h1> */}
+//     {/* <h1 style={myStyle}>Sana Ullah</h1> */}
+//     <div>Sana Ullah</div>
+
+//     <p className={styles.container}>Here is the paragraph</p>
+//     </>
+  
+//   )
+// }
+
+// export default App
+
+
 import React from 'react'
-import './App.css'
-import  styles from './outside.css'
+// import AxiosPost from './AxiosPost'
+import AxiosTut from './AxiosTut'
 
 const App = () => {
-
-  // const myStyle = {
-  //   color:"red",
-  //   backgroundColor:"orange"
-  // }
   return (
-    <>
-    {/* <h1 style={{color:"red", fontSize:'50px',textAlign:"center"}}> App</h1> */}
-    {/* <h1 style={myStyle}>Sana Ullah</h1> */}
-    <div>Sana Ullah</div>
-
-    <p className={styles.master}>Here is the paragraph</p>
-    </>
-  
+    <div>
+   <AxiosTut/>
+   {/* <AxiosPost/> */}
+    </div>
   )
 }
 
