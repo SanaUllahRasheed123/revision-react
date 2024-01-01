@@ -412,14 +412,14 @@
 
 
 import React from 'react'
-// import AxiosPost from './AxiosPost'
-import AxiosTut from './AxiosTut'
+import AxiosPost from './AxiosPost'
+// import AxiosTut from './AxiosTut'
 
 const App = () => {
   return (
-    <div>
-   <AxiosTut/>
-   {/* <AxiosPost/> */}
+    <div className='app'>
+   {/* <AxiosTut/> */}
+   <AxiosPost/>
     </div>
   )
 }
