@@ -38,13 +38,14 @@ const AgeValidation = () => {
 
 return(
     <>
-        {isAgeValid? <div>you can vote</div>: <div>You canot vote</div>}
+        {isAgeValid? <div>you can vote</div>: <h1>You canot vote</h1>}
     </>
 )
 
   // ************************ Short Circuit Operator**********************
   //short circuit operator use only when we have to display only true condition, it not works 
   //for false condition
+  //new comments added
 
   // return(
   //   <>
