@@ -447,29 +447,17 @@
 
 // export default App
 
+
+
 import React from 'react'
-import Name from './Name'
+import AgeValidation from './AgeValidation'
 
 const App = () => {
   return (
-
     <>
-    <Name fname="Sana Ullah" lname= "Rasheed"/>
+      <AgeValidation/>
     </>
   )
 }
 
 export default App
-
-// import React from 'react'
-// import AgeValidation from './AgeValidation'
-
-// const App = () => {
-//   return (
-//     <>
-//       <AgeValidation/>
-//     </>
-//   )
-// }
-
-// export default App

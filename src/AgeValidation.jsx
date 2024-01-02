@@ -6,16 +6,16 @@ const AgeValidation = () => {
   // ************************ if else condtion**********************
 
 
-    // if(isAgeValid){
-    //     return (
-    //         <div>You can vote</div>
-    //       )
+    if(isAgeValid){
+        return (
+            <div>You can vote</div>
+          )
 
 
-    // }else
-    // return(
-    //     <div>You cannot vote</div>
-    // )
+    }else
+    return(
+        <div>You cannot vote</div>
+    )
 
   // ************************ Variable Element condtion**********************
 
@@ -46,11 +46,11 @@ const AgeValidation = () => {
   //short circuit operator use only when we have to display only true condition, it not works 
   //for false condition
 
-  return(
-    <>
-        {isAgeValid && <div>You can vote</div>}
-    </>
-  )
+  // return(
+  //   <>
+  //       {isAgeValid && <div>You can vote</div>}
+  //   </>
+  // )
 
  
 }
