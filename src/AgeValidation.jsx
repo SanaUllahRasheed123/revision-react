@@ -33,7 +33,7 @@ const AgeValidation = () => {
   )
 
 
-  // ************************ Ternary Operator condtion**********************
+  // *********************** Ternary Operator condtion**********************
 
 
 // return(
