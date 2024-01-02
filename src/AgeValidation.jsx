@@ -24,7 +24,7 @@ const AgeValidation = () => {
      age = <div>U can vote</div>
   }
   else{
-    age= <div>You cannot vote</div>
+    age= <h1>You cannot vote</h1>
   }
   return(
    <>
