@@ -460,3 +460,16 @@ const App = () => {
 }
 
 export default App
+
+// import React from 'react'
+// import AgeValidation from './AgeValidation'
+
+// const App = () => {
+//   return (
+//     <>
+//       <AgeValidation/>
+//     </>
+//   )
+// }
+
+// export default App

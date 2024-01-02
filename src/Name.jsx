@@ -1,8 +1,9 @@
 import React from 'react'
 
-const Name = (props) => {
+const Name = ({fname,lname}) => {
+    // const [fname,lname] = props;
   return (
-    <div>{props.fname}<hr></hr>{props.lname}</div>
+    <div>{fname}<hr></hr>{lname}</div>
   )
 }
 
