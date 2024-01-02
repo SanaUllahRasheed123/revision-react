@@ -6,31 +6,31 @@ const AgeValidation = () => {
   // ************************ if else condtion**********************
 
 
-    if(isAgeValid){
-        return (
-            <div>You can vote</div>
-          )
+    // if(isAgeValid){
+    //     return (
+    //         <div>You can vote</div>
+    //       )
 
 
-    }else
-    return(
-        <div>You cannot vote</div>
-    )
+    // }else
+    // return(
+    //     <div>You cannot vote</div>
+    // )
 
   // ************************ Variable Element condtion**********************
 
-//   let age;
-//   if(isAgeValid){
-//      age = <div>U can vote</div>
-//   }
-//   else{
-//     age= <div>You cannot vote</div>
-//   }
-//   return(
-//    <>
-//      {age} 
-//    </>
-//   )
+  let age;
+  if(isAgeValid){
+     age = <div>U can vote</div>
+  }
+  else{
+    age= <div>You cannot vote</div>
+  }
+  return(
+   <>
+     {age} 
+   </>
+  )
 
 
   // ************************ Ternary Operator condtion**********************
