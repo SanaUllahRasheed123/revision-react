@@ -6,7 +6,7 @@ button{
   text-align: center;
 } */
 
-body{
+/* body{
   background-color: #ccddff;
 }
 .app{
@@ -84,4 +84,15 @@ button:hover {
   position: relative;
   left: 11%;
   top: -54px;
+} */
+
+.App{
+  text-align: center;
+}
+.header{
+  color: white;
+  background-color: #8e0625;
+  font-weight: 500;
+  font-size: larger;
+  text-align: center;
 }

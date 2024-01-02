@@ -411,16 +411,51 @@
 // export default App
 
 
+// import React from 'react'
+// import AxiosPost from './AxiosPost'
+// // import AxiosTut from './AxiosTut'
+
+// const App = () => {
+//   return (
+//     <div className='app'>
+//    {/* <AxiosTut/> */}
+//    <AxiosPost/>
+//     </div>
+//   )
+// }
+
+// export default App
+
+
+// import React from 'react'
+// import Header from './components/Header'
+// import './App.css'
+// import Form from './components/Form'
+
+
+// const App = () => {
+//   const addContact = (data) => {
+//     console.log(data)
+//   }
+//   return (
+//   <>
+//     <Header/>
+//     <Form addContact={addContact}/>
+//   </>
+//   )
+// }
+
+// export default App
+
 import React from 'react'
-import AxiosPost from './AxiosPost'
-// import AxiosTut from './AxiosTut'
+import Name from './Name'
 
 const App = () => {
   return (
-    <div className='app'>
-   {/* <AxiosTut/> */}
-   <AxiosPost/>
-    </div>
+
+    <>
+    <Name fname="Sana Ullah" lname= "Rasheed"/>
+    </>
   )
 }
 
