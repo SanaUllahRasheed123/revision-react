@@ -449,14 +449,68 @@
 
 
 
-import React from 'react'
-import AgeValidation from './AgeValidation'
+// import React from 'react'
+// import AgeValidation from './AgeValidation'
+
+// const App = () => {
+//   return (
+//     <>
+//       <AgeValidation/>
+//     </>
+//   )
+// }
+
+// export default App
+
+
+// import React from 'react'
+// import Form from './Form'
+
+// const App = () => {
+//   return (
+//     <>    <div>App</div>
+//    <Form str="UMAR"/>
+//     </>   
+
+//   )
+// }
+
+// export default App
+
+
+// import React, { useState } from 'react'
+
+// const App = () => {
+//   const [count, setCount] = useState(0)
+//   const [dcount,setDecount]=useState(0)
+//   let [set,setA]=useState();
+//   return (
+//     <>
+//     <h1>The value of add is {count}</h1>
+//     <button onClick={()=>{setCount(count+1)}}>Add</button>
+//     <h1>{dcount}</h1>
+//     <h1>{set}</h1>
+//     <button onClick={()=>{setDecount(dcount-1)}}>Subtract</button>
+//     <button onClick={()=>{setA(set=0)}}>RESET</button>
+//     </>
+   
+//   )
+// }
+
+// export default App
+
+import axios from 'axios'
+import React, { useEffect } from 'react'
+
 
 const App = () => {
+  useEffect(()=>{
+    axios.get('http://localhost:5555/books').then(
+      respone=>console.log(respone)
+    )
+  },[])
   return (
-    <>
-      <AgeValidation/>
-    </>
+    <div>A Simple Program to test CORS POlicy in Nodes js</div>
   )
 }
 

@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 
-const AgeValidation = () => {
-    const [isAgeValid, setIsAgeValid] = useState(false)
+// const AgeValidation = () => {
+//     const [isAgeValid, setIsAgeValid] = useState(false)
 
   // ************************ if else condtion**********************
-
+    
 
     // if(isAgeValid){
     //     return (
